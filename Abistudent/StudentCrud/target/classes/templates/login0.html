@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+<script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body>
+    <form th:action="@{/login0}" method="post">
+        <div>
+            <label> UserName: <input type="text" name="username" />
+            </label>
+        </div>
+        <div>
+            <label> PassWord: <input type="password" name="password" />
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    </form>
+</body>
+</html>

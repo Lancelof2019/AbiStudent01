@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+<script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<div>
+<h2 >Registration Information</h2>
+<tr>
+
+<tr>
+<div class="col-sm-5" align = "center">
+                 <div class="panel-body" align = "center" >
+                 <table class="table">
+  <thead class="thead-dark">
+    <tr>
+             <th>Uid</th>
+             <th>Student Name</th>
+             <th>Password</th>
+             <th>Last Name</th>
+             <th>First Name</th>
+             <th>Email Address</th>
+             <th>Telephone Number</th>
+             <th>Edit</th>
+             <th>Delete</th>
+            
+   </tr>
+  </thead>
+  
+ <tbody>
+  
+<tr  th:each="listregister : ${listregister}">
+<td th:text="${listregister.uid}">Student UID</td>
+<td th:text="${listregister.username}">UserName</td>
+<td th:text="${listregister.password}">Password</td>
+<td th:text="${listregister.last_name}">Last Name</td>
+<td th:text="${listregister.first_name}">First Name</td>
+<td th:text="${listregister.email}">Email Address</td>
+<td th:text="${listregister.telephone}">Telephone NUmber</td>
+
+<!--  td th:text="${student.uid}">UID</td-->
+<!-- td th:text="${student.pwd}">Password</td-->
+<td>
+<a th:href="@{'/reedit/' + ${listregister.uid}}">Edit</a>
+</td>     
+<td>
+<a th:href="@{'/redelete/' + ${listregister.uid}}">Delete</a>
+</td>     
+</tr>
+  
+  </tbody>
+</table>
+                    
+                 </div>
+ 
+            </div>
+ 
+</tr>
+ 
+</tbody>
+</table>
+<div>
+</body>
+</html>
